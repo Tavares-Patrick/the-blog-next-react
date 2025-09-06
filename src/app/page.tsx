@@ -3,9 +3,8 @@ import { PostList } from "@/components/PostList"
 import { Suspense } from "react";
 import { Container } from "@/components/Container";
 import { Header } from "@/components/Header";
-import Link from "next/link";
-import Image from "next/image";
 import { PostHeading } from "@/components/PostHeading";
+import { PostCoverImage } from "@/components/PostCoverImage";
 
 
 export default async function HomePage() {
@@ -15,15 +14,18 @@ export default async function HomePage() {
       <Header/>
 
       <section className="grid grid-cols-1 gap-8 mb-16 sm:grid-cols-2 group">
-        <Link className="w-full h-full overflow-hidden rounded-xl" href={"#"}>
-          <Image
-            className="w-full h-full object-cover object-center group-hover:scale-105 transition"
-            src='/img/bryen_0.png'
-            width={1200} height={720}
-            alt="Título do post"
-            priority
+        <PostCoverImage
+          linkProps={{
+            href:'/post/adada',
+          }}
+          imageProps={{
+            width: 1200,
+            height: 720,
+            src: '/img/bryen_9.png',
+            alt: 'Alt da imagem',
+            priority: true,
+          }}
           />
-        </Link>
         <div className="flex flex-col gap-4 sm:justify-center">
           <time className="text-slate-600 block text-sm/tight" dateTime="2025-09-04">04/06/2025 10:00</time>
 
