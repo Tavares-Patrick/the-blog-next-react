@@ -1,5 +1,6 @@
 import { PostCoverImage } from "../PostCoverImage";
 import { PostHeading } from "../PostHeading";
+import { PostSummary } from "../PostSummary";
 
 export function PostFeatured() {
   const slug = 'qualquer'
@@ -30,6 +31,15 @@ export function PostFeatured() {
           Lorem Ipsum has been the standard dummy text ever since the 1500s, when an
           unknown printer took a galley of type and scrambled it to make a type
         </div>
+        <PostSummary
+        postLink={postLink}
+        postHeading='h1'
+        createdAt={'2025-04-08T00:24:38.616Z'}
+        excerpt={
+          'O Next.js também é uma boa escolha para quem quer se preocupar com performance e SEO.'
+        }
+        title={'Rotina matinal de pessoas altamente eficazes'}
+      />
       </section>
   )
 }
